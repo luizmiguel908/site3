@@ -27,30 +27,62 @@
             100% { opacity: 1; }
         }
 
-        /* Centering form */
-        form {
+        /* Centering container */
+        .container {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width: 80%; /* Adjust container width as needed */
+            max-width: 500px; /* Limit container width on large screens */
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
         }
+
+        /* Form styling */
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #777;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 200px;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Lista de Aniversários</h1>
-    <form action="configuração.php" method="post">
-        <label for="nome">Nome COMPLETO:</label>
-        <input type="text" id="nome" name="nome" required>
-        <br>
-        <label for="data_aniversario">Data de Aniversário:</label>
-        <input type="date" id="data_aniversario" name="data_aniversario" required>
-        <br><br>
-        <button type="submit" name="enviar">Enviar</button>
-    </form>
+    <div class="container">
+        <h1>Lista de Aniversários</h1>
+        <h2>Preencha os campos abaixo para adicionar um novo aniversário</h2>
+        <form action="configuração.php" method="post">
+            <label for="nome">Nome COMPLETO:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br>
+            <label for="data_aniversario">Data de Aniversário:</label>
+            <input type="date" id="data_aniversario" name="data_aniversario" required>
+            <br><br>
+            <button type="submit" name="enviar">Enviar</button>
+        </form>
+    </div>
 
     <script>
         // Calculate number of stars based on screen size
