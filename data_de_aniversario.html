@@ -39,6 +39,9 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Form styling */
@@ -67,6 +70,12 @@
             color: #fff;
             padding: 10px 20px;
         }
+
+        /* Table styling */
+        table {
+            background-color: #0000FF; /* Azul */
+            margin-top: 50px; /* Ajusta a margem superior da tabela */
+        }
     </style>
 </head>
 <body>
@@ -82,21 +91,9 @@
             <br><br>
             <button type="submit" name="enviar">Enviar</button>
         </form>
-    </div>
+
+        </div>
 
     <script>
         // Calculate number of stars based on screen size
-        const numStars = Math.floor(window.innerWidth * window.innerHeight / 5000);
-
-        // Dynamically create stars with random positions
-        for (let i = 0; i < numStars; i++) {
-            const star = document.createElement("div");
-            star.classList.add("star");
-            star.style.left = Math.random() * window.innerWidth + "px";
-            star.style.top = Math.random() * window.innerHeight + "px";
-            document.body.appendChild(star);
-        }
-    </script>
-
-</body>
-</html>
+        const numStars = Math.floor(window.innerWidth * window.
