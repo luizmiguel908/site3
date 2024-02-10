@@ -39,9 +39,6 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         /* Form styling */
@@ -96,4 +93,10 @@
             const star = document.createElement("div");
             star.classList.add("star");
             star.style.left = Math.random() * window.innerWidth + "px";
-            star.style.top = Math.random() *
+            star.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(star);
+        }
+    </script>
+
+</body>
+</html>
