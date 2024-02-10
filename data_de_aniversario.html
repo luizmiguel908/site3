@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt">
-    
-
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>data de Aniversário</title>
+    <title>Lista de Aniversários</title>
     <link rel="stylesheet" href="acaliacao.css">
+    <style>
+        /* Starry sky background */
+        body {
+            background: #232323; /* Dark background for stars */
+            position: relative; /* Allow star positioning */
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #fff; /* White stars */
+            animation: twinkle 1.5s linear infinite; /* Animation for twinkling */
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Centering form */
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        }
+    </style>
 </head>
 <body>
-    
     <h1>Lista de Aniversários</h1>
     <form action="configuração.php" method="post">
         <label for="nome">Nome COMPLETO:</label>
@@ -22,6 +51,20 @@
         <br><br>
         <button type="submit" name="enviar">Enviar</button>
     </form>
+
+    <script>
+        // Calculate number of stars based on screen size
+        const numStars = Math.floor(window.innerWidth * window.innerHeight / 5000);
+
+        // Dynamically create stars with random positions
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement("div");
+            star.classList.add("star");
+            star.style.left = Math.random() * window.innerWidth + "px";
+            star.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(star);
+        }
+    </script>
 
 </body>
 </html>
