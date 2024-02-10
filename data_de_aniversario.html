@@ -74,7 +74,15 @@
         /* Table styling */
         table {
             background-color: #0000FF; /* Azul */
-            margin-top: 50px; /* Ajusta a margem superior da tabela */
+            margin: 0 auto; /* Centraliza a tabela */
+            border-collapse: collapse; /* Remove bordas duplas entre células */
+            width: 80%; /* Ajusta a largura da tabela */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
         }
     </style>
 </head>
@@ -91,9 +99,5 @@
             <br><br>
             <button type="submit" name="enviar">Enviar</button>
         </form>
-
-        </div>
-
-    <script>
-        // Calculate number of stars based on screen size
-        const numStars = Math.floor(window.innerWidth * window.
+</body>
+</html>
