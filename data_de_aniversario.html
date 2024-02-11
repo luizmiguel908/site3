@@ -1,103 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt">
+   
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lista de Aniversários</title>
-    <link rel="stylesheet" href="acaliacao.css">
-    <style>
-        /* Starry sky background */
-        body {
-            background: #232323; /* Dark background for stars */
-            position: relative; /* Allow star positioning */
-        }
-
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background-color: #fff; /* White stars */
-            animation: twinkle 1.5s linear infinite; /* Animation for twinkling */
-        }
-
-        @keyframes twinkle {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-        /* Centering container */
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%; /* Adjust container width as needed */
-            max-width: 500px; /* Limit container width on large screens */
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Form styling */
-        h1 {
-            color: #333;
-            font-size: 24px;
-            margin-top: 0;
-        }
-
-        h2 {
-            color: #777;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        input {
-            width: 200px;
-        }
-
-        button {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-        }
-
-        /* Table styling */
-        table {
-            background-color: #0000FF; /* Azul */
-            margin: 0 auto; /* Centraliza a tabela */
-            border-collapse: collapse; /* Remove bordas duplas entre células */
-            width: 80%; /* Ajusta a largura da tabela */
-        }
-
-        th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-    </style>
+   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>data de Aniversário</title>
+  <link rel="stylesheet" href="acaliacao.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Lista de Aniversários</h1>
-        <h2>Preencha os campos abaixo para adicionar um novo aniversário</h2>
-        <form action="configuração.php" method="post">
-            <label for="nome">Nome COMPLETO:</label>
-            <input type="text" id="nome" name="nome" required>
-            <br>
-            <label for="data_aniversario">Data de Aniversário:</label>
-            <input type="date" id="data_aniversario" name="data_aniversario" required>
-            <br><br>
-            <button type="submit" name="enviar">Enviar</button>
-        </form>
+   
+  <h1>Lista de Aniversários</h1>
+  <form action="configuração.php" method="post">
+    <label for="nome">Nome COMPLETO:</label>
+    <input type="text" id="nome" name="nome" required>
+    <br>
+    <label for="data_aniversario">Data de Aniversário:</label>
+    <input type="date" id="data_aniversario" name="data_aniversario" required>
+    <br><br>
+    <button type="submit" name="enviar">Enviar</button>
+  </form>
+
 </body>
 </html>
